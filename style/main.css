@@ -1,0 +1,387 @@
+body {
+    margin: 0px;
+    line-height: 1.5;
+    font-size: 16px;
+    font-family: 'Montserrrat', sans-serif;
+    font-weight: 400;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+ ::before::after {
+    box-sizing: border-box;
+}
+
+.hidden {
+    display: none!important;
+}
+
+h2 {
+    text-align: center;
+    line-height: 1.5;
+    font-size: 16px;
+    font-family: 'Montserrrat', sans-serif;
+    font-weight: 400;
+    border-bottom: 2px solid white;
+}
+
+.section {
+    background-color: #49497c;
+    min-height: 100vh;
+    display: block;
+    padding: 0 30px;
+}
+
+.section .container {
+    padding-top: 60px;
+    padding-bottom: 70px;
+}
+
+.section-title {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-size: 40px;
+    color: #302e4d;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    margin: 0;
+    position: relative;
+}
+
+.section-title h2::before {
+    content: '';
+    height: 4px;
+    width: 80px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.section-title h2::after {
+    content: '';
+    height: 4px;
+    width: 50px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 8px;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    position: relative;
+}
+
+.padd-15 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.shadow-dark {
+    -webkit-box-shadow: 0 0 20px rgba(48, 46, 0.15);
+    box-shadow: 0 0 20px rgba(48, 46, 0.15);
+}
+
+
+/* ------dog items */
+
+.dog.container {
+    padding-bottom: 40px;
+}
+
+.dog .dog-filter {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.dog .dog-filter button {
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin: 0 10px;
+    color: #302e4d;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+    padding-bottom: 2px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.dog .dog-filter button:hover {
+    color: white;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    border-bottom: 2px solid white;
+}
+
+.dog .dog-item {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    margin-bottom: 30px;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.dog .dog-item.hide {
+    display: none;
+}
+
+.dog .dog-item.show {
+    display: block;
+    animation: showItem 0.5s ease;
+}
+
+@-webkit-keyframes showItem {
+    0% {
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes showItem {
+    0% {
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.dog .dog-item-inner {
+    border: 5px solid #fdf9ff;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+
+.dog .dog-item-inner .dog-img img {
+    width: 100%;
+    display: block;
+}
+
+.dog .dog-item .dog-info {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    padding: 30px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    opacity: 0;
+}
+
+.dog .dog-item-inner:hover .dog-info {
+    opacity: 1;
+}
+
+.dog .dog-item-inner:hover .dog-info {
+    opacity: 1;
+}
+
+.dog .dog-item .dog-info h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffffff;
+    text-transform: capitalize;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    -webkit-transform: translate(-20px);
+    transform: translate(-20px);
+    opacity: 0;
+}
+
+.dog .dog-item-inner:hover .dog-info h4 {
+    opacity: 1;
+    -webkit-transform: translate(0px);
+    transform: translate(0px);
+}
+
+.dog .dog-item .dog-info .icon {
+    height: 40px;
+    width: 40px;
+    background-color: #ffffffff;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    -webkit-transform: translate(20px);
+    transform: translate(20px);
+}
+
+.dog .dog-item-inner:hover .dog-info .icon {
+    opacity: 1;
+    -webkit-transform: translate(0px);
+    transform: translate(0px);
+}
+
+.dog .dog-item .dog-info .icon .fa {
+    line-height: 40px;
+}
+
+
+/* lightbox */
+
+.lightbox {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+    display: none;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 30px;
+}
+
+.lightbox.open {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.lightbox .lightbox-content img {
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    max-height: 500px;
+    display: block;
+}
+
+.lightbox .lightbox-content {
+    position: relative;
+}
+
+.lightbox.open .lightbox-content {
+    animation: lightboxImage .5s ease;
+}
+
+@-webkit-keyframes lightboxImage {
+    0% {
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes lightboxImage {
+    0% {
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+.lightbox .lightbox-content .lightbox-close {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    /* background-color: red; */
+    top: -40px;
+    right: 0px;
+    font-size: 20px;
+    font-size: 32px;
+    text-align: right;
+    color: #ffffffff;
+    line-height: 40px;
+}
+
+.lightbox .lightbox-content .lightbox-caption {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: space-between;
+    justify-content: space-between;
+    font-size: 16px;
+    color: #ffffffff;
+    font-weight: 400;
+    z-index: -1;
+}
+
+.lightbox .lightbox-controls .prev-item,
+.lightbox .lightbox-controls .next-item {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #ffffffff;
+    top: 50%;
+    margin-top: -20px;
+    z-index: 110;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.lightbox .lightbox-controls .prev-item:active,
+.lightbox .lightbox-controls .next-item:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.lightbox .lightbox-controls .prev-item {
+    left: 10px;
+}
+
+.lightbox .lightbox-controls .next-item {
+    right: 30px;
+}
+
+.lightbox .lightbox-controls .next-item .fa,
+.lightbox .lightbox-controls .prev-item .fa {
+    font-size: 32px;
+    line-height: 40px;
+}
